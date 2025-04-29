@@ -1,0 +1,14 @@
+app = "nekuri-bot-manual"
+
+[build]
+  image = "python:3.10-slim"
+
+[env]
+  TOKEN = "7549154782:AAHfSaSZ6rJYzWtC9x3_Iqa8xUnTGNybT3o"  # Замените!
+
+[processes]
+  app = "python nekuri_bot.py"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
