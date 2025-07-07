@@ -3,7 +3,7 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Cont
 import json
 import os
 from logging.handlers import RotatingFileHandler
-with open("/home/roman2801/nekuri_bot/store_full.json", "r", encoding="utf-8") as f:
+with open('store_full.json', 'r', encoding='utf-8') as f:
     stores_data = json.load(f)
 
 import logging
