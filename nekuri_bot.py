@@ -1,6 +1,7 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 import json
+import os
 from logging.handlers import RotatingFileHandler
 with open("/home/roman2801/nekuri_bot/store_full.json", "r", encoding="utf-8") as f:
     stores_data = json.load(f)
@@ -30,7 +31,7 @@ logger = logging.getLogger(__name__)
 logger.info("🚀 Бот запущен")
 
 # Токен бота
-TOKEN = '7549154782:AAHfSaSZ6rJYzWtC9x3_Iqa8xUnTGNybT3o'
+TOKEN = os.environ.get("TOKEN_TELEGRAM")
 
 # Структура с магазинами
 
